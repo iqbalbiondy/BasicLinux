@@ -1,0 +1,104 @@
+Bash Script adalah salah satu fitur yang dibutuhkan oleh adminintrator dan developper OS Linux untuk mempermudah dan mempercepat pekerjaan.
+
+Dasar-dasar Bash Scripting
+
+String
+	menampilkan tulisan biasa ke layar
+	
+	[Cara penulisan]
+	echo [isi tulisan]  ///boleh tanpa petik atau dengan petik
+
+
+Variable
+	kita bisa membuat variabel di command linux
+	
+	[Cara penulisan]
+	#!/bin/bash
+
+	[variabel] = "[isi variabel]"
+	echo "[Narasi output] $[variabel]"
+
+
+Inputan User
+	kita juga bisa memberikan inputan pada linux
+	
+	[Cara penulisan]
+	#!/bin/bash
+	echo '[isi pertanyaan]?'
+	read namauser
+	echo "[narasi output] $namauser salam kenal"
+	
+Operator Perbandingan
+	String	int	keterangan
+	==	-eq	Sama dengan
+	!=	-ne	Tidak sama dengan
+	>	-gt	Lebih besar dari
+	>=	-ge	Lebih besar dari atau sama dengan
+	<	-lt	kurang dari
+	<=	-le	Kurang dari atau sama dengan
+
+Logika Kondisi
+	menggunakan keyword if,then,else dan fi
+	
+	[Contoh implementasi]
+	#!/bin/bash
+	echo 'Woi berapa umu loe?'
+	read umur
+	if [ $umur -ge 17 ]
+	then
+    	echo 'Kamu boleh punya KTP.'
+	else
+    	echo 'Kamu belum cukup umur.'
+	fi
+	
+Pengulangan
+	hampir sama dengan bahasa program seperti umumnya.
+	terdiri dari 3 keyword yaitu for,while,until:
+	
+	{for}
+	
+	[Contoh implementasi]
+	for value in {1..10}
+	do
+ 	echo "Perulangan ke-$value"
+	done
+	echo "Selesai"
+	
+	{while}
+	[Contoh implementasi]
+	#!/bin/bash
+	angka=1
+	while [ $angka -le 50 ]
+	do
+  	echo "Perulangan while ke-$angka mahasiswa"
+  	#penambahan variable angka 1 setiap perulangan
+  	((angka++)) 
+	done
+	echo "Selesai"
+Array
+	tanda ( dan ) dan tidak perlu menggunakan koma cukup tambahkan spasi
+	
+	[Contoh implementasi]
+	#!/bin/bash
+	#array dengan index
+	matkul=("Pemdas" "PKK" "AOK" "PPD")
+	
+	#print index ke 3
+	echo ${matkul[2]} # output: AOK
+	
+	#print semua array
+	echo ${matkul[*]} # output: Aggun Afgan Rosa Ariel
+
+	#print index array
+	echo ${!matkul[*]} # output: 0 1 2 3
+
+	#tambah array
+	matkul+=(SISOP) # tambah sisop ke dalam array
+	
+	#hapus salah satu array
+	unset matkul[0]  # hapus pemdas dari array 
+
+	#print jumlah array 
+	echo ${#matkul[*]} # output: 4
+
+	echo ${matkul[*]} # output: PKK AOK PPD SISOP

@@ -1,0 +1,40 @@
+			BASIC LINUX FOR BEGINNER
+			[Linux Command Line]
+
+Jika # = masuk sebagai root
+     $ = masuk sebagai user
+     
+# Perintah ls (list directory content)
+	-> menampilkan direktori yang sekarang ada
+	
+	misal:
+	ls Documents/ 	(menampilkan isi dari direktori Documents)
+	ls -a 		(menampilkan semua file baik yang terhidden maupun tidak, file yang terhidden ditandai dengan titik + namafile)
+	ls -l		(menampilkan informasi lebih detail dari direktori yang ada)
+	
+	
+# Perintah pwd (print working directory)
+	-> menampilkan info mengenai direktori yang sedang digunakan
+	
+# Perintah cd (change directory)
+	-> untuk masuk ke dalam file/folder
+	
+	misal:
+	cd Documents/ 	(Sekarang kita sudah masuk ke dalam directory Documents)
+	cd .. 		(untuk kembali satu level direktori)
+	cd		(untuk kembali ke home)
+	cd ~		(untuk kembali ke home)
+	
+# Perintah pushd dan popd
+	-> untuk menampilkan lokasi direktori pada diretori utama.
+	
+	misal:
+	pushd /etc
+	popd
+	
+# Perintah file
+	-> untuk memberikan informasi jenis suatu file atau folder
+	
+	misal:
+	file .wget-hsts		(maka diberikan infonrmasi seperti berikut .wget-hsts: ASCII text)
+
